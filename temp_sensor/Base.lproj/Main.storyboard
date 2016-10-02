@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="temp_sensor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,116 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-CL-Hfc">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-tm-gfW" customClass="MaterialView" customModule="temp_sensor" customModuleProvider="target">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sU-0G-Saf">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="I3L-5O-bct"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="21"/>
+                                                <color key="textColor" red="0.8980392157" green="0.96078431369999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="6RE-YF-0B8">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="77" id="S10-9Q-XHd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="53"/>
+                                                <color key="textColor" red="0.92620444300000004" green="0.93612229820000004" blue="0.94110381600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="8a2-h5-YCv"/>
+                                            <constraint firstAttribute="height" constant="128" id="Txt-LI-CiP"/>
+                                            <constraint firstAttribute="trailing" secondItem="6RE-YF-0B8" secondAttribute="trailing" constant="54" id="WLk-hi-t2J"/>
+                                            <constraint firstItem="9sU-0G-Saf" firstAttribute="centerX" secondItem="wWB-tm-gfW" secondAttribute="centerX" id="f1k-cM-acL"/>
+                                            <constraint firstItem="6RE-YF-0B8" firstAttribute="leading" secondItem="wWB-tm-gfW" secondAttribute="leading" constant="54" id="gQK-y6-CWc"/>
+                                            <constraint firstItem="6RE-YF-0B8" firstAttribute="top" secondItem="wWB-tm-gfW" secondAttribute="top" constant="-27" id="hTN-K4-i5A"/>
+                                            <constraint firstAttribute="bottom" secondItem="9sU-0G-Saf" secondAttribute="bottom" id="jP4-5K-zYo"/>
+                                            <constraint firstItem="9sU-0G-Saf" firstAttribute="top" secondItem="6RE-YF-0B8" secondAttribute="bottom" constant="8" id="tQo-lv-ILQ"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="staptixLogo" translatesAutoresizingMaskIntoConstraints="NO" id="QoU-Ss-WME">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Hk2-Ir-OdC"/>
+                                            <constraint firstAttribute="width" constant="240" id="acp-Ku-7aZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBZ-OM-e3R" customClass="CustomButton" customModule="temp_sensor" customModuleProvider="target">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3Y1-Yg-X31"/>
+                                            <constraint firstAttribute="width" constant="100" id="rxD-iK-iTf"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.8980392157" green="0.96078431369999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" image="newmusical_btn"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="-2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.64000000000000001" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8WR-V8-XYJ"/>
+                                        </connections>
+                                    </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something is wrong with Firebase :(" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="F5a-oH-cTh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="4Op-a2-Ivq"/>
+                                            <constraint firstAttribute="width" constant="300" id="QA6-dv-oJL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.29933502760000003" blue="0.29792581670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wWB-tm-gfW" firstAttribute="centerX" secondItem="nnE-CL-Hfc" secondAttribute="centerX" id="Ic8-Im-ygz"/>
+                                    <constraint firstItem="wWB-tm-gfW" firstAttribute="top" secondItem="nnE-CL-Hfc" secondAttribute="top" constant="146" id="J1l-LT-v58"/>
+                                    <constraint firstItem="QoU-Ss-WME" firstAttribute="centerY" secondItem="nnE-CL-Hfc" secondAttribute="centerY" id="Rgv-LV-wUd"/>
+                                    <constraint firstItem="wBZ-OM-e3R" firstAttribute="centerX" secondItem="nnE-CL-Hfc" secondAttribute="centerX" id="gVs-BN-M3v"/>
+                                    <constraint firstItem="F5a-oH-cTh" firstAttribute="centerX" secondItem="nnE-CL-Hfc" secondAttribute="centerX" id="ngc-72-yWw"/>
+                                    <constraint firstAttribute="bottom" secondItem="wBZ-OM-e3R" secondAttribute="bottom" constant="73" id="q4H-9L-pUe"/>
+                                    <constraint firstItem="F5a-oH-cTh" firstAttribute="centerY" secondItem="nnE-CL-Hfc" secondAttribute="centerY" constant="107" id="te6-Qe-oE2"/>
+                                    <constraint firstItem="QoU-Ss-WME" firstAttribute="centerX" secondItem="nnE-CL-Hfc" secondAttribute="centerX" id="wmq-HN-Mre"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nnE-CL-Hfc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1D3-iG-O8c"/>
+                            <constraint firstAttribute="trailing" secondItem="nnE-CL-Hfc" secondAttribute="trailing" id="Vlt-7e-DcD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nnE-CL-Hfc" secondAttribute="bottom" id="YUO-b9-E2f"/>
+                            <constraint firstItem="nnE-CL-Hfc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dxX-kP-6yj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TempBtn" destination="wBZ-OM-e3R" id="OK8-ys-6uo"/>
+                        <outlet property="TempLabel" destination="6RE-YF-0B8" id="n4D-5J-XOj"/>
+                        <outlet property="TimeLabel" destination="9sU-0G-Saf" id="TVB-0q-VEZ"/>
+                        <outlet property="errMsg" destination="F5a-oH-cTh" id="qpV-E9-4yk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="122.40000000000001"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="newmusical_btn" width="50" height="50"/>
+        <image name="staptixLogo" width="900" height="1800"/>
+    </resources>
 </document>
